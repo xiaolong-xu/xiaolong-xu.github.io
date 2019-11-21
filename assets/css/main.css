@@ -1990,12 +1990,19 @@ input, select, textarea {
 
 /* Box */
 
-	.box {
-		border-radius: 5px;
-		border: solid 2px #e4e4e4;
-		margin-bottom: 2.25em;
-		padding: 1.5em;
-	}
+		.box {
+			width: "500px";
+			text-align: justify;
+			margin: 5px;
+		}
+		.box p{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.box img{
+			height: 100%;
+		}
 
 		.box > :last-child,
 		.box > :last-child > :last-child,
@@ -2445,6 +2452,7 @@ input, select, textarea {
 
 	table {
 		margin: 0 0 2.25em 0;
+		table-layout: fixed; 
 		width: 100%;
 	}
 
@@ -2460,6 +2468,8 @@ input, select, textarea {
 
 		table td {
 			padding: 0.75em 0.75em;
+			white-space: nowrap; /* 自适应宽度*/
+    		word-break:  keep-all; /* 避免长单词截断，保持全部 */
 		}
 
 		table th {
@@ -2707,7 +2717,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: center;
 		top: 0;
-		width: 23em;
+		width: 20em;
 		right: 0;
 	}
 
